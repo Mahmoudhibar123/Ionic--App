@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Spares
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button  navPush="AddSparePage">
+        <ion-icon  name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-list>
+    <ion-list-header>
+      Spares
+    </ion-list-header>
+    <ion-item *ngFor="let item of items | async" detail-push navPush="EditSparePage" [navParams]="{spare:item}">{{item.titre}}
+
+    </ion-item>
+  </ion-list>
+</ion-content>

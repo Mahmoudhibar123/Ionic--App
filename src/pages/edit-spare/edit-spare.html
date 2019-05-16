@@ -1,0 +1,39 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Edit spares</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="background">
+  <ion-item>
+    <ion-label>Titre</ion-label>
+    <ion-input [(ngModel)]="spare.titre" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Description</ion-label>
+    <ion-textarea [(ngModel)]="spare.description" ></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Image</ion-label>
+    <ion-textarea [(ngModel)]="spare.image" ></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Categorie</ion-label>
+    <ion-textarea [(ngModel)]="spare.categorie"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Prix</ion-label>
+    <ion-input [(ngModel)]="spare.prix" ></ion-input>
+  </ion-item>
+
+  <button ion-button block (click)="updateSpare(spare)">Update</button>
+  <button ion-button block  color="  danger" (click)="removeSpare(spare)">Remove</button>
+</ion-content>
